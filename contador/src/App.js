@@ -1,4 +1,4 @@
-import Contador from "./meusComponentes/Contador.js";
+import Contador from "./meusComponentes/ContadorV2.jsx";
 
 function App() {
   return (

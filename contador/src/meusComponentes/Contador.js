@@ -1,39 +1,39 @@
 import { Component } from "react";
 import './Contador.css';
 
-export default class Contador extends Component{
+export default class Contador extends Component {
 
-    constructor(props){
+    constructor(props) {
         super();
         this.props = props;
         this.state = {
-            contador : 0
+            contador: 0
         }
     }
 
-    plus(){
+    plus() {
         let valor = this.state.contador + 1;
         this.setState({
-            contador : valor
+            contador: valor
         })
     }
 
-    less(){
+    less() {
         let valor;
-        if(this.state.contador > 0){
+        if (this.state.contador > 0) {
             valor = this.state.contador - 1;
             this.setState({
-                contador : valor
+                contador: valor
             })
         }
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <section className="contador-container">
                 <div className="contador-display">{this.state.contador}</div>
-                <button className="contador-buttom" onClick={()=>{this.plus()}}>+</button>
-                <button className="contador-buttom" onClick={()=>{this.less()}}>-</button>
+                <button className="contador-buttom" onClick={() => { this.plus() }}>+</button>
+                <button className="contador-buttom" onClick={() => { this.less() }}>-</button>
             </section>
         )
     }
